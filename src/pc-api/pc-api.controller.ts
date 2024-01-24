@@ -6,7 +6,7 @@ import { Public } from 'src/decorators';
 @Public()
 @Controller('pc-api')
 export class PcApiController {
-constructor(
+  constructor(
     private readonly pcApiService: PcApiService,
     private readonly UserService: UserService,
   ) {}
@@ -15,7 +15,6 @@ constructor(
   async login(@Body() body: any) {
     const { password, username, type } = body;
     const user = await this.UserService.login(username, password);
-    console.log('🚀 ~ PcApiController ~ login ~ body:', body);
     return {
       status: 'ok',
       type,

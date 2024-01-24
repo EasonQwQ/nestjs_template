@@ -31,7 +31,6 @@ export class ProductController {
   async createProduct(
     @Body() product: UpdateProductDto,
   ): Promise<ProductEntity> {
-    console.log('🚀 ~ ProductController ~ product:', product);
     return this.productService.createProduct(product);
   }
 

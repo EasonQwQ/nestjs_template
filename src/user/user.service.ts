@@ -15,7 +15,6 @@ export class UserService {
         username,
       },
     });
-    console.log('🚀 ~ UserService ~ login ~ user:', user);
     if (!user) {
       return null;
     }

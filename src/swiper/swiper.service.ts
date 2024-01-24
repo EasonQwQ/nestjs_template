@@ -24,7 +24,6 @@ export class SwiperService extends BaseService<SwiperEntity> {
       page,
       limit,
     });
-    console.log('🚀 ~ SwiperService ~ findAll ~ res:', res);
     return super.findAll();
   }
 }

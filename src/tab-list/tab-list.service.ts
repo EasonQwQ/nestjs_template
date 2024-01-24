@@ -18,8 +18,6 @@ export class TabListService extends BaseService<TabListEntity> {
   create(createTabListDto: CreateTabListDto): Promise<TabListEntity> {
     const tabListEntity: TabListEntity =
       this.tabListRepository.create(createTabListDto);
-    console.log('🚀 ~ TabListService ~ create ~ tabListEntity:', tabListEntity);
-
     return this.tabListRepository.save(tabListEntity);
   }
 
@@ -28,7 +26,6 @@ export class TabListService extends BaseService<TabListEntity> {
       page,
       limit,
     });
-    console.log('🚀 ~ TabListService ~ findAll ~ res:', res);
     return super.findAll();
   }
 
